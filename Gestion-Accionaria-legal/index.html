@@ -1,0 +1,259 @@
+"<!DOCTYPE html>
+<html lang=""es"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>Infograf?a Legal: Gesti?n Accionaria en S.A. Argentinas</title>
+    <script src=""https://cdn.tailwindcss.com""></script>
+    <link href=""https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"" rel=""stylesheet"">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #CAF0F8; /* Lightest Blue from Palette */
+            color: #374151; /* text-gray-700 */
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .text-main { color: #0077B6; } /* Dark Blue */
+        .text-accent { color: #00B4D8; } /* Medium Blue */
+        .bg-main { background-color: #0077B6; }
+        .bg-accent { background-color: #00B4D8; }
+        .border-main { border-color: #0077B6; }
+        .legal-point-card {
+            border: 2px solid #90E0EF; /* Light Blue */
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .legal-point-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0077B6; /* Dark Blue */
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+        }
+        .legal-point-card h3 span {
+            margin-right: 0.75rem;
+            font-size: 2rem;
+            color: #00B4D8; /* Medium Blue */
+        }
+        .legal-point-card ul {
+            list-style: disc;
+            padding-left: 1.25rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .sticky-nav {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .nav-link {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s ease;
+        }
+        .nav-link:hover {
+            background-color: #E0F7FA; /* Very light blue for hover */
+        }
+        .nav-link.active {
+            background-color: #00B4D8; /* Medium Blue */
+            color: white;
+        }
+
+        /* NO SVG CONFIRMATION: No SVG graphics or Mermaid JS are used. Visualizations are HTML/CSS. */
+        /* PALETTE CONFIRMATION: Brilliant Blues - #0077B6, #00B4D8, #90E0EF, #CAF0F8. Neutrals: #ADB5BD, #FFFFFF, #000000 */
+    </style>
+</head>
+<body class=""text-gray-800"">
+
+    <nav id=""navbar"" class=""sticky-nav hidden md:block mb-8"">
+        <div class=""container mx-auto px-4"">
+            <ul class=""flex justify-center space-x-2 overflow-x-auto"">
+                <li><a href=""#introduccion"" class=""nav-link"">Introducci?n</a></li>
+                <li><a href=""#lgs"" class=""nav-link"">LGS 19.550</a></li>
+                <li><a href=""#libro-acciones"" class=""nav-link"">Libro de Acciones</a></li>
+                <li><a href=""#firma-digital"" class=""nav-link"">Firma Digital</a></li>
+                <li><a href=""#reportes"" class=""nav-link"">Reportes AFIP/IGJ</a></li>
+                <li><a href=""#preferencia"" class=""nav-link"">Derecho Preferencia</a></li>
+                <li><a href=""#proteccion-datos"" class=""nav-link"">Protecci?n de Datos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class=""container mx-auto p-4 md:p-8"">
+
+        <header class=""text-center mb-12"">
+            <h1 class=""text-4xl md:text-5xl font-bold text-main mb-4"">Infograf?a Legal: Gesti?n Accionaria en S.A. Argentinas</h1>
+            <p class=""text-lg md:text-xl text-gray-700"">Aspectos clave para la digitalizaci?n de la compraventa y transferencia de acciones.</p>
+        </header>
+
+        <section id=""introduccion"" class=""card"">
+            <h2 class=""text-3xl font-semibold text-main mb-6 text-center"">Contexto Legal de la Digitalizaci?n Accionaria</h2>
+            <p class=""text-lg mb-4"">Esta infograf?a resume los puntos legales fundamentales que rigen la compraventa y transferencia de acciones en Sociedades An?nimas argentinas, con un enfoque en los desaf?os y oportunidades que presenta la digitalizaci?n de estos procesos. Es una gu?a para el an?lisis y la discusi?n con expertos legales.</p>
+            <p class=""text-lg"">El proyecto busca implementar una aplicaci?n para que los accionistas puedan interactuar mensualmente, ofreciendo comprar y vender acciones, y que la plataforma facilite el emparejamiento, formalizaci?n y reporte de estas operaciones, siempre dentro del marco normativo vigente.</p>
+        </section>
+
+        <section id=""lgs"" class=""card"">
+            <h2 class=""text-3xl font-semibold text-main mb-6 text-center"">LGS 19.550 (Art. 215): Transferencia de Acciones Nominativas</h2>
+            <div class=""legal-point-card"">
+                <h3><span>??</span>Requisitos Clave</h3>
+                <ul>
+                    <li>La transmisi?n de acciones nominativas o escriturales debe **notificarse por escrito** a la sociedad emisora.</li>
+                    <li>Es **obligatoria la inscripci?n** en el Libro de Registro de Acciones para que la transferencia surta efecto contra la sociedad y terceros.</li>
+                    <li>**Precedente ""Electrosistemas"":** La jurisprudencia (caso ""Electrosistemas"") indica que el directorio puede solicitar **requisitos previos adicionales** (ej. copia del contrato de transferencia) antes de registrar la operaci?n, subrayando la necesidad de una documentaci?n formal y robusta.</li>
+                    <li>La aplicaci?n debe facilitar la **adjunci?n del acuerdo subyacente** para cumplir con esta interpretaci?n judicial.</li>
+                </ul>
+            </div>
+            <p class=""text-center mt-6 text-gray-700"">La notificaci?n y registro son pilares, con matices importantes por la jurisprudencia.</p>
+        </section>
+
+        <section id=""libro-acciones"" class=""card"">
+            <h2 class=""text-3xl font-semibold text-main mb-6 text-center"">El ""Libro de Registro de Acciones"": ?F?sico o Digital?</h2>
+            <div class=""grid md:grid-cols-2 gap-6"">
+                <div class=""legal-point-card"">
+                    <h3><span>?</span>Obligatoriedad y Contenido</h3>
+                    <ul>
+                        <li>Libro de comercio **obligatorio** para S.A.</li>
+                        <li>Registra clases de acciones, derechos, estado de integraci?n, **transferencias sucesivas**, grav?menes y modificaciones.</li>
+                    </ul>
+                </div>
+                <div class=""legal-point-card"">
+                    <h3><span>?</span>Digitalizaci?n: S.A. vs. SAS</h3>
+                    <ul>
+                        <li>**SAS (Sociedades por Acciones Simplificadas):** Habilitada expl?citamente la digitalizaci?n de libros (ej. IGJ - TAD). Utilizan hashes SHA-256 para integridad.</li>
+                        <li>**S.A. Tradicionales:** La normativa **no extiende expl?citamente** este r?gimen digital. La ambig?edad regulatoria sugiere la **posible necesidad de mantener un libro f?sico rubricado**.</li>
+                        <li>**Implicaci?n para la App:** La aplicaci?n podr?a funcionar como soporte de gesti?n, pero la transcripci?n manual al libro f?sico podr?a ser necesaria.</li>
+                        <li>**Acci?n Legal Requerida:** **Confirmar con experto legal y Registro P?blico** (IGJ/provincial) los requisitos exactos para la S.A. espec?fica.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class=""text-center mt-6 text-gray-700"">La digitalizaci?n es clave, pero su alcance para las S.A. tradicionales requiere confirmaci?n legal.</p>
+        </section>
+
+        <section id=""firma-digital"" class=""card"">
+            <h2 class=""text-3xl font-semibold text-main mb-6 text-center"">Ley de Firma Digital (25.506): Validez y Aplicaci?n</h2>
+            <div class=""legal-point-card"">
+                <h3><span>??</span>Equivalencia Legal y Requisitos</h3>
+                <ul>
+                    <li>La Ley 25.506 otorga a la firma digital la **misma validez jur?dica que la firma manuscrita**, si cumple con requisitos de identidad del firmante, voluntad e inalterabilidad del documento.</li>
+                    <li>**Habilitador Clave:** Permite la digitalizaci?n de documentos legalmente vinculantes, como los contratos de transferencia de acciones.</li>
+                    <li>**Implementaci?n en la App:**
+                        <ul>
+                            <li>AppSheet puede capturar firmas nativamente.</li>
+                            <li>Para **documentos de alta importancia (contratos de transferencia)**, se recomienda integrar con un **proveedor de firma digital certificado** (ej. DocuSign) para mayor certeza jur?dica y auditabilidad, en l?nea con el precedente ""Electrosistemas"".</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <p class=""text-center mt-6 text-gray-700"">La firma digital es esencial para la formalizaci?n legal y la agilizaci?n de procesos.</p>
+        </section>
+
+        <section id=""reportes"" class=""card"">
+            <h2 class=""text-3xl font-semibold text-main mb-6 text-center"">Obligaciones de Reporte: AFIP e IGJ</h2>
+            <div class=""grid md:grid-cols-2 gap-6"">
+                <div class=""legal-point-card"">
+                    <h3><span>?</span>AFIP (Administraci?n Federal de Ingresos P?blicos)</h3>
+                    <ul>
+                        <li>**Reporte de Operaciones:** Exige el registro de transferencias y cesiones de t?tulos, acciones y participaciones.</li>
+                        <li>**Plazo:** Dentro de los **10 d?as h?biles** desde el conocimiento de la operaci?n.</li>
+                        <li>**Datos Requeridos:** Altamente detallados (tipo de operaci?n, fechas, cantidades, precios, datos completos de operadores -CUIT/CUIL/CDI, nacionalidad, domicilio-, montos en moneda de origen y ARS, forma de pago, cambio de control societario).</li>
+                        <li>**Implicaci?n para la App:** El modelo de datos debe capturar todos estos detalles; el m?dulo de reportes debe generar la informaci?n en el formato requerido.</li>
+                    </ul>
+                </div>
+                <div class=""legal-point-card"">
+                    <h3><span>??</span>IGJ (Inspecci?n General de Justicia) / Registros Provinciales</h3>
+                    <ul>
+                        <li>**Inscripci?n de Actos Societarios:** Encargado de la inscripci?n de modificaciones al capital social y detalles de accionistas.</li>
+                        <li>**Plazo:** Solicitud de inscripci?n dentro de los **30 d?as** desde la realizaci?n del acto o aprobaci?n del acta.</li>
+                        <li>**Implicaci?n para la App:** La aplicaci?n debe facilitar la preparaci?n de la documentaci?n para la presentaci?n oportuna ante la IGJ.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class=""text-center mt-6 text-gray-700"">El cumplimiento de estos plazos y la granularidad de los datos son cr?ticos para evitar sanciones.</p>
+        </section>
+
+        <section id=""preferencia"" class=""card"">
+            <h2 class=""text-3xl font-semibold text-main mb-6 text-center"">Derecho de Preferencia y Limitaciones Estatutarias</h2>
+            <div class=""legal-point-card"">
+                <h3><span>??</span>Consideraciones Cruciales</h3>
+                <ul>
+                    <li>**Licitud:** Las restricciones a la transferibilidad (ej. derecho de preferencia) son l?citas si no implican prohibici?n absoluta y constan en estatutos/t?tulos.</li>
+                    <li>**Procedimiento:** El contrato social debe establecer procedimientos claros: comunicaci?n de oferta, precio, plazo (usualmente hasta **30 d?as** para ejercer el derecho).</li>
+                    <li>**Impacto en la App:** El algoritmo de emparejamiento debe ser **multifase**:
+                        <ol class=""list-decimal list-inside ml-4 mt-2 text-sm"">
+                            <li>**1ra Fase:** Ofrecer acciones a beneficiarios del derecho de preferencia por un per?odo definido.</li>
+                            <li>**2da Fase:** Si no se ejerce, abrir la oferta al mercado general (otros interesados).</li>
+                        </ol>
+                    </li>
+                    <li>**Necesidad:** La aplicaci?n debe asegurar que se respeten los derechos de preferencia antes de cualquier emparejamiento general.</li>
+                </ul>
+            </div>
+            <p class=""text-center mt-6 text-gray-700"">Este derecho moldea fundamentalmente la l?gica de las transacciones en la aplicaci?n.</p>
+        </section>
+
+        <section id=""proteccion-datos"" class=""card"">
+            <h2 class=""text-3xl font-semibold text-main mb-6 text-center"">Ley de Protecci?n de Datos Personales (25.326): Implicaciones</h2>
+            <div class=""legal-point-card"">
+                <h3><span>??</span>Consentimiento y Transferencias Internacionales</h3>
+                <ul>
+                    <li>**Consentimiento Explicito:** Exige el consentimiento expreso de los titulares para el tratamiento de sus datos personales.</li>
+                    <li>**Transferencias Internacionales:** Restringe la transferencia de datos personales a pa?ses que no ofrezcan ""niveles de protecci?n adecuados"".</li>
+                    <li>**AppSheet y Google Cloud:** El uso de AppSheet y Google Cloud (que opera globalmente) implica una **transferencia internacional de datos personales fuera de Argentina**.</li>
+                    <li>**Acci?n Legal Requerida:**
+                        <ul>
+                            <li>**Verificar legalmente** si las certificaciones de seguridad y privacidad de Google Cloud (ISO, SOC2) son reconocidas por la AAIP (Agencia de Acceso a la Informaci?n P?blica) de Argentina como ""nivel adecuado"".</li>
+                            <li>En caso contrario, considerar **mecanismos legales adicionales** (ej. cl?usulas contractuales est?ndar) u obtener el **consentimiento informado y expl?cito** de todos los accionistas para dichas transferencias.</li>
+                        </ul>
+                    </li>
+                    <li>**Pol?ticas Internas:** Implementar pol?ticas de retenci?n y supresi?n de datos conforme a la ley.</li>
+                </ul>
+            </div>
+            <p class=""text-center mt-6 text-gray-700"">La protecci?n de datos es un pilar legal cr?tico, especialmente en transferencias internacionales.</p>
+        </section>
+
+        <footer class=""text-center mt-12 py-8 border-t border-gray-300"">
+            <p class=""text-sm text-gray-600"">&copy; <span id=""currentYear""></span> Infograf?a Legal generada para la modernizaci?n de la gesti?n accionaria.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const navbar = document.getElementById('navbar');
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('#navbar a.nav-link');
+
+        function changeActiveLink() {
+            let index = sections.length;
+
+            while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
+            
+            navLinks.forEach((link) => link.classList.remove('active'));
+            if (navLinks[index]) {
+                 navLinks[index].classList.add('active');
+            }
+        }
+
+        if (navbar) {
+            window.addEventListener('scroll', changeActiveLink);
+            changeActiveLink(); // Initial check
+        }
+    </script>
+</body>
+</html>"
