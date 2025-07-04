@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenimiento TECHAARG - AppSheet Mockup</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to external CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col pb-20">
+    <!-- AppSheet Header -->
+    <header class="appsheet-header">
+        <button id="menuButton" class="text-white focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+        <h1 id="headerTitle" class="text-lg font-semibold">Mantenimiento TECHAARG</h1>
+        <button id="syncButton" class="text-white focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.928M2.986 19.897L9.824 13.06a4.5 4.5 0 016.364 0l-7.18 7.18a4.5 4.5 0 01-6.364 0zM12 18v-5.25m0 0a4.5 4.5 0 01-6.364 0L12 18z" />
+            </svg>
+        </button>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="appContent" class="flex-grow p-4 overflow-y-auto">
+        <!-- Content will be dynamically loaded here based on navigation -->
+    </main>
+
+    <!-- Floating Action Button -->
+    <div id="fabButton" class="fab hidden">+</div>
+
+    <!-- AppSheet Bottom Navigation -->
+    <nav class="appsheet-bottom-nav">
+        <button id="navDashboard" class="appsheet-nav-item active">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12h2.25m0 0a2.25 2.25 0 002.25 2.25h2.25M7.5 12a2.25 2.25 0 012.25-2.25h2.25m-9 0v-3.375c0-1.036.84-1.875 1.875-1.875h1.35c1.036 0 1.875.84 1.875 1.875v3.375m-9 0h3.375c1.036 0 1.875.84 1.875 1.875v1.35c0 1.036-.84 1.875-1.875 1.875H2.25m9-1.875h3.375c1.036 0 1.875.84 1.875 1.875v1.35c0 1.036-.84 1.875-1.875 1.875H11.25m0-1.875v3.375c0 1.036.84 1.875 1.875 1.875h1.35c1.036 0 1.875-.84 1.875-1.875v-3.375m-9-3.375h3.375c1.036 0 1.875.84 1.875 1.875v1.35c0 1.036-.84 1.875-1.875 1.875h3.375m-3.375 0v3.375c0 1.036.84 1.875 1.875 1.875h1.35c1.036 0 1.875-.84 1.875-1.875v-3.375" />
+            </svg>
+            <span>Dashboard</span>
+        </button>
+        <button id="navActivos" class="appsheet-nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.75a2.25 2.25 0 012.25-2.25h.5a2.25 2.25 0 012.25 2.25V21m-4.5 0h6.75M4.5 10.5H19.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H4.5A2.25 2.25 0 002.25 6.75v1.5A2.25 2.25 0 004.5 10.5zm0 0v7.5m15-7.5v7.5" />
+            </svg>
+            <span>Activos</span>
+        </button>
+        <button id="navOTs" class="appsheet-nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m-4.5-6H12a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H9.75A2.25 2.25 0 007.5 6.75v4.5A2.25 2.25 0 009.75 13.5z" />
+            </svg>
+            <span>OTs</span>
+        </button>
+        <button id="navTareas" class="appsheet-nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 4.5v15m6-15v15m-10.5-1.5h15A2.25 2.25 0 0021.75 18V6.75A2.25 2.25 0 0019.5 4.5h-15A2.25 2.25 0 002.25 6.75v10.5A2.25 2.25 0 004.5 19.5z" />
+            </svg>
+            <span>Tareas</span>
+        </button>
+    </nav>
+
+    <!-- Link to external JavaScript file -->
+    <script src="js/script.js"></script>
+</body>
+</html>

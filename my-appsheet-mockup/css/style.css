@@ -1,0 +1,160 @@
+/* Custom styles for the AppSheet mockup */
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f0f2f5; /* Light gray background, common in AppSheet */
+}
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* AppSheet-like header */
+.appsheet-header {
+    background-color: #3f51b5; /* AppSheet primary blue */
+    color: white;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+/* AppSheet-like bottom navigation */
+.appsheet-bottom-nav {
+    background-color: white;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+.appsheet-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #757575; /* Inactive icon color */
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.appsheet-nav-item.active {
+    color: #3f51b5; /* Active icon color */
+}
+.appsheet-nav-item:hover {
+    background-color: #f5f5f5;
+}
+.appsheet-nav-item svg {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 0.25rem;
+}
+/* Floating Action Button (FAB) */
+.fab {
+    position: fixed;
+    bottom: 70px; /* Above the bottom nav */
+    right: 20px;
+    background-color: #3f51b5;
+    color: white;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.2s;
+    z-index: 1001;
+}
+.fab:hover {
+    background-color: #303f9f;
+}
+/* Card styles */
+.appsheet-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+/* Input field styles */
+.appsheet-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.appsheet-input:focus {
+    outline: none;
+    border-color: #3f51b5;
+    box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+/* Button styles */
+.appsheet-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+    text-align: center;
+}
+.appsheet-button-primary {
+    background-color: #3f51b5;
+    color: white;
+}
+.appsheet-button-primary:hover {
+    background-color: #303f9f;
+}
+.appsheet-button-secondary {
+    background-color: #e0e0e0;
+    color: #333;
+}
+.appsheet-button-secondary:hover {
+    background-color: #c0c0c0;
+}
+.appsheet-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .appsheet-content {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .appsheet-bottom-nav {
+        width: 900px; /* Limit width on larger screens */
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 1rem 1rem 0 0;
+    }
+    .fab {
+        right: calc(50% - 450px + 20px); /* Adjust FAB position relative to content */
+    }
+}
